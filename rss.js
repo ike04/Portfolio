@@ -1,4 +1,4 @@
-$(function () {
+function rss() {
 	$.ajax({
 		url: 'rss.php',
 		xmlType: 'xml',
@@ -25,8 +25,8 @@ $(function () {
 			output.wrapInner('<ul></ul>');
 			for (i in data) {
 				output.find('ul').append('<li><a href="' + data[i].link.text + '">' + data[i].title.text + '</a>' + data[i].description.text + '</li>');
-				// console.log (data[i]);
+				console.log (data[i]);
 			}
 		}
 	});
-});
+}
