@@ -594,6 +594,7 @@ p {
 #services {
   background: #f7f7f7;
   position: relative;
+  padding-top: 60px;
   padding-bottom: 80px;
 }
 
@@ -792,6 +793,13 @@ p {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Output
+--------------------------------------------------------------*/
+.output-list {
+  margin: 20px;
 }
 
 /*--------------------------------------------------------------
