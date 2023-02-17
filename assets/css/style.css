@@ -805,9 +805,9 @@ p {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
-  .skill-img-list {
-    margin: 20px;
-  }
+.skill-img-list {
+  margin: 20px;
+}
 
 /*--------------------------------------------------------------
 # Journal
@@ -1548,28 +1548,32 @@ blockquote {
 .timeline {
   list-style: none;
 }
-.timeline > li {
+
+.timeline>li {
   margin-bottom: 60px;
 }
 
 /* for Desktop */
-@media ( min-width : 640px ){
-  .timeline > li {
+@media (min-width : 640px) {
+  .timeline>li {
     overflow: hidden;
     margin: 0;
     position: relative;
   }
+
   .timeline-date {
     width: 110px;
     float: left;
     margin-top: 20px;
   }
+
   .timeline-content {
     width: 75%;
     float: left;
     border-left: 3px #e5e5d1 solid;
     padding-left: 30px;
   }
+
   .timeline-content:before {
     content: '';
     width: 12px;
@@ -1580,4 +1584,52 @@ blockquote {
     top: 24px;
     border-radius: 100%;
   }
+
+  .output-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 960px;
+  }
+
+  .output-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+  }
+
+  .output-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .output-item img {
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .output-date {
+    margin: 5px 10px 15px;
+    font-size: 16px;
+    color: #666;
+    text-align: left;
+  }
+
+  .output-lgtm {
+    font-size: 14px;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
 }
