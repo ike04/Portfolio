@@ -1,32 +1,34 @@
-function rss() {
-	$.ajax({
-		url: 'rss.php',
-		xmlType: 'xml',
-		success: function (xml) {
-			var row = 0;
-			var data = [];
-			var nodeName;
-			var output = $('#rss');
-			// start item 成形
-			$(xml).find('item').each(function () {
-				data[row] = {};
-				$(this).children().each(function () {
-					nodeName = $(this)[0].nodeName;
-					data[row][nodeName] = {};
-					attributes = $(this)[0].attributes;
-					for (var i in attributes) {
-						data[row][nodeName][attributes[i].name] = attributes[i].value;
-					}
-					data[row][nodeName]['text'] = $(this).text();
-				});
-				row++;
-			});
-			// end item 成形
-			output.wrapInner('<ul></ul>');
-			for (i in data) {
-				output.find('ul').append('<li><a href="' + data[i].link.text + '">' + data[i].title.text + '</a>' + data[i].description.text + '</li>');
-				console.log (data[i]);
-			}
-		}
-	});
-}
+const apiUrl = 'https://qiita.com/api/v2/authenticated_user/items';
+const accessToken = 'YOUR_ACCESS_TOKEN';
+
+fetch(`${apiUrl}?per_page=5`, {
+    headers: { 'Authorization': `Bearer 290836882926e3340d4b599744b50c6364f9509f` }
+})
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(item => {
+            const title = item.title;
+            const url = item.url;
+            const body = item.body;
+
+            const article = document.createElement('article');
+
+            const h2 = document.createElement('h2');
+            h2.textContent = title;
+            article.appendChild(h2);
+
+            const p1 = document.createElement('p');
+            p1.textContent = body;
+            article.appendChild(p1);
+
+            const p2 = document.createElement('p');
+            const a = document.createElement('a');
+            a.href = url;
+            a.textContent = 'Read more';
+            p2.appendChild(a);
+            article.appendChild(p2);
+
+            document.body.appendChild(article);
+        });
+    })
+    .catch(error => console.error(error));
