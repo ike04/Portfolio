@@ -1,7 +1,7 @@
 const apiUrl = 'https://qiita.com/api/v2/authenticated_user/items';
 const accessToken = '290836882926e3340d4b599744b50c6364f9509f';
 
-fetch(`${apiUrl}?per_page=5`, {
+fetch(`${apiUrl}?per_page=4`, {
 	headers: { 'Authorization': `Bearer ${accessToken}` }
 })
 	.then(response => response.json())
@@ -13,7 +13,7 @@ fetch(`${apiUrl}?per_page=5`, {
 			const url = item.url;
 			const date = new Date(item.created_at).toLocaleDateString();
 			const likesCount = item.likes_count;
-			const iconUrl = item.user.profile_image_url;
+			const iconUrl = "assets/img/qiita.png";
 
 			const article = document.createElement('article');
 			article.className = 'output-item';
@@ -26,13 +26,13 @@ fetch(`${apiUrl}?per_page=5`, {
 			content.className = 'output-content';
 			article.appendChild(content);
 
-			const h3 = document.createElement('h3');
-			h3.className = 'output-title';
-			h3.textContent = title;
-			h3.addEventListener('click', () => {
+			const t = document.createElement('p');
+			t.className = 'output-title';
+			t.textContent = title;
+			t.addEventListener('click', () => {
 				window.open(url, '_blank');
 			});
-			content.appendChild(h3);
+			content.appendChild(t);
 
 			const p = document.createElement('p');
 			p.className = 'output-date';

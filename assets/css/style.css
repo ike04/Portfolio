@@ -1336,10 +1336,8 @@ blockquote {
   .output-item {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    margin: 15px;
     padding: 20px;
-    width: 100%;
+    width: 50%;
     text-align: left;
     transition: transform 0.2s;
     display: flex;
@@ -1490,10 +1488,8 @@ blockquote {
   .output-item {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    margin: 15px;
     padding: 20px;
-    width: 100%;
+    width: 50%;
     text-align: left;
     transition: transform 0.2s;
     display: flex;
@@ -1643,10 +1639,8 @@ blockquote {
   .output-item {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    margin: 15px;
     padding: 20px;
-    width: 100%;
+    width: 50%;
     text-align: left;
     transition: transform 0.2s;
     display: flex;
@@ -1796,10 +1790,8 @@ blockquote {
   .output-item {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    margin: 15px;
     padding: 20px;
-    width: 100%;
+    width: 50%;
     text-align: left;
     transition: transform 0.2s;
     display: flex;
@@ -1894,9 +1886,7 @@ blockquote {
   .output-item {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    padding: 10px;
+    padding: 20px;
     width: 50%;
     text-align: left;
     transition: transform 0.2s;
