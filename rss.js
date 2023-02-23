@@ -1,5 +1,5 @@
 const apiUrl = 'https://qiita.com/api/v2/authenticated_user/items';
-const accessToken = process.env.SECRET_QIITA;
+const accessToken = process.env.QIITA_SECRET;
 
 fetch(`${apiUrl}?per_page=4`, {
 	headers: { 'Authorization': `Bearer ${accessToken}` }

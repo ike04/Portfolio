@@ -9,7 +9,7 @@ on:
     paths-ignore: [ '**.md', '**.MD' ]
   workflow_dispatch:
 env:
-  SECRET_QIITA: ${{secrets.QIITA_SECRET}}
+  QIITA_SECRET: ${{secrets.QIITA_SECRET}}
 
 jobs:
   build:
